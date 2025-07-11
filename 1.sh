@@ -16,7 +16,7 @@ else
 fi
 
 # 下载远程脚本并检测
-curl -sL https://gitlab.com/jinhuaitao66/jht/-/raw/main/jht.sh -o ~/jht.sh
+curl -sL https://github.com/jinhuaitao/jht/blob/main/jht.sh -o ~/jht.sh
 if [ $? -ne 0 ]; then
     echo "下载 jht.sh 失败，请检查网络连接。"
     exit 1
