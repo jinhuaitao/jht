@@ -916,7 +916,7 @@ install_it_tools() {
 # 函数：安装Webssh
 install_web_ssh() {
     echo "正在安装Webssh..."
-    docker run -d --net=host --log-driver json-file --log-opt max-file=1 --log-opt max-size=100m --restart always --name webssh -e TZ=Asia/Shanghai jhtao.pp.ua/jrohy/webssh
+    docker run -d --net=host --log-driver json-file --log-opt max-file=1 --log-opt max-size=100m --restart always --name webssh -e authInfo='jht@jht.one:Lili900508@@' -e TZ=Asia/Shanghai jhtao.pp.ua/jrohy/webssh
     echo "Webssh安装完成。"
     return_to_script
 }
