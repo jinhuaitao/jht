@@ -1063,6 +1063,8 @@ install_ali_st() {
     echo "正在下载并执行 Alist..."
 mkdir -p /mnt/alist
 docker run -d --restart=unless-stopped -v /etc/alist:/mnt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" jhtao.pp.ua/xhofe/alist:latest
+    echo "设置 Alist 管理员密码..."
+    docker exec alist ./alist admin set Lili900508@@
     echo "Alist安装完成。"
     return_to_script
 }
