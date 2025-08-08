@@ -1710,7 +1710,7 @@ while true; do
             echo "   27. Stirling PDF            28.网页版验证" 
             echo "   29. DDNS-GO                 30.密码管理器" 
             echo "   31. Alist                   32.安装X-UI" 
-            echo "   33. 挂载甲骨文附加卷          34.安装LibreTV" 
+            echo "   33. 挂载甲骨文附加卷        34.安装LibreTV" 
             read -p "请输入数字选择操作 [1-34]: " tool_choice
             case $tool_choice in
                 1)
