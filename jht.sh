@@ -621,7 +621,7 @@ install_nezha_panel() {
 # 函数：安装 Halo
 install_Halo_panel() {
     echo "开始安装 Halo..."
-    docker run -it -d --name halo --restart always -p 8090:8090 -v /mnt/data/halo/.halo2:/root/.halo2 docker.jhtao.pp.ua/halohub/halo:2.20
+    docker run -it -d --name halo --restart always -p 8090:8090 -v /mnt/data/halo/.halo2:/root/.halo2 jhtao.pp.ua/halohub/halo:latest
     echo "Halo安装完成。"
     return_to_script
 }
