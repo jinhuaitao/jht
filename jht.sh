@@ -681,7 +681,7 @@ install_nginx_WebUI() {
   -e BOOT_OPTIONS="--server.port=8080" \
   --net=host \
   --restart=always \
-  gh.jht126.eu.org/nginxwebui:latest
+  gh.jht126.eu.org/cym1102/nginxwebui:latest
     echo "nginxWebUI 安装完成。"
     return_to_script
 }
@@ -689,7 +689,7 @@ install_nginx_WebUI() {
 # 函数：nexterm
 install_nexterm() {
     echo "开始安装 nexterm..."
-docker run -d -p 6989:6989 --name nexterm --restart always -v nexterm:/app/data gh.jht126.eu.org/nexterm:1.0.2-OPEN-PREVIEW
+docker run -d -p 6989:6989 --name nexterm --restart always -v nexterm:/app/data gh.jht126.eu.org/germannewsmaker/nexterm:1.0.2-OPEN-PREVIEW
     echo "nexterm 安装完成。"
     return_to_script
 }
