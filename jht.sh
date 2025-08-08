@@ -1018,6 +1018,28 @@ docker-compose up -d
     return_to_script
 }
 
+# 函数：安装 Stirling PDF 
+install_libre_tv() {
+    mkdir -p /mnt/libretv
+    cd /mnt/libretv || { echo "Failed to navigate to /mnt/pdf"; exit 1; }
+
+    # 创建 docker-compose.yml 文件
+    cat <<EOF > docker-compose.yml
+version: '3.3'
+services:
+  libretv:
+    image: bestzwei/libretv:latest
+    container_name: libretv
+    ports:
+      - "8899:8080" # 将内部 8080 端口映射到主机的 8899 端口
+    environment:
+      - PASSWORD=${PASSWORD:-900508} 
+    restart: unless-stopped
+EOF
+docker-compose up -d
+#
+    return_to_script
+}
 
 
 # 函数：安装 MEMOS 
@@ -1688,8 +1710,8 @@ while true; do
             echo "   27. Stirling PDF            28.网页版验证" 
             echo "   29. DDNS-GO                 30.密码管理器" 
             echo "   31. Alist                   32.安装X-UI" 
-            echo "   33. 挂载甲骨文附加卷" 
-            read -p "请输入数字选择操作 [1-33]: " tool_choice
+            echo "   33. 挂载甲骨文附加卷          34.安装LibreTV" 
+            read -p "请输入数字选择操作 [1-34]: " tool_choice
             case $tool_choice in
                 1)
                     install_debian_12
@@ -1786,6 +1808,9 @@ while true; do
                    ;;
                 33)
                    install_Oracle_disk
+                   ;;
+                34)
+                   install_libre_tv
                    ;;
                 19)
                     echo "请选择要执行的操作:"
