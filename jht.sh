@@ -1018,7 +1018,7 @@ docker-compose up -d
     return_to_script
 }
 
-# 函数：安装 Stirling PDF 
+# 函数：安装 LibreTV 
 install_libre_tv() {
     mkdir -p /mnt/libretv
     cd /mnt/libretv || { echo "Failed to navigate to /mnt/pdf"; exit 1; }
