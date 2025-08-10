@@ -527,7 +527,7 @@ install_debian_12() {
             ;;
         3)
             echo "正在安装 Alpine 3.20系统..."
-            curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O reinstall.sh $_ && bash reinstall.sh alpine 3.21 --password Lili900508@@
+            curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O reinstall.sh $_ && bash reinstall.sh alpine 3.22 --password Lili900508@@
             echo "Alpine edge系统安装完成。"
             ;;
         2)
