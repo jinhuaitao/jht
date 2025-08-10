@@ -516,7 +516,7 @@ install_debian_12() {
     echo "请选择要安装的系统:"
     echo "1) Debian 13"
     echo "2) Ubuntu 22.04"
-    echo "3) Alpine edge"
+    echo "3) Alpine 3.22"
     read -p "请输入选项 (1, 2, 或 3): " choice
     
     case $choice in
@@ -526,9 +526,9 @@ install_debian_12() {
             echo "Debian 13系统安装完成。"
             ;;
         3)
-            echo "正在安装 Alpine 3.20系统..."
+            echo "正在安装 Alpine 3.22系统..."
             curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O reinstall.sh $_ && bash reinstall.sh alpine 3.22 --password Lili900508@@
-            echo "Alpine edge系统安装完成。"
+            echo "Alpine 3.22系统安装完成。"
             ;;
         2)
             echo "正在安装 Ubuntu 22.04系统..."
