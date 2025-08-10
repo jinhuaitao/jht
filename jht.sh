@@ -514,16 +514,16 @@ reboot_system() {
 # 函数：Debian 12系统安装
 install_debian_12() {
     echo "请选择要安装的系统:"
-    echo "1) Debian 12"
+    echo "1) Debian 13"
     echo "2) Ubuntu 22.04"
     echo "3) Alpine edge"
     read -p "请输入选项 (1, 2, 或 3): " choice
     
     case $choice in
         1)
-            echo "正在安装 Debian 12系统..."
-            bash <(curl -sSL https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh) -debian 13 -pwd 'Lili900508@@' --nomemcheck --network "static"
-            echo "Debian 12系统安装完成。"
+            echo "正在安装 Debian 13系统..."
+            bash <(curl -sSL https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh) -debian 13 --password Lili900508@@
+            echo "Debian 13系统安装完成。"
             ;;
         3)
             echo "正在安装 Alpine 3.20系统..."
