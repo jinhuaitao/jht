@@ -522,7 +522,7 @@ install_debian_12() {
     case $choice in
         1)
             echo "正在安装 Debian 12系统..."
-            bash <(curl -sSL https://gitlab.com/jinhuaitao66/jht/-/raw/main/InstallNET.sh) -debian 12 -pwd 'Lili900508@@' --nomemcheck --network "static"
+            bash <(curl -sSL https://gitlab.com/jinhuaitao66/jht/-/raw/main/InstallNET.sh) -debian 13 -pwd 'Lili900508@@' --nomemcheck --network "static"
             echo "Debian 12系统安装完成。"
             ;;
         3)
