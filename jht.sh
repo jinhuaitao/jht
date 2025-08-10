@@ -522,7 +522,7 @@ install_debian_12() {
     case $choice in
         1)
             echo "正在安装 Debian 13系统..."
-            bash <(curl -sSL https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh) - debian 13 --password Lili900508@@
+            curl -O https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh || wget -O reinstall.sh $_ && bash reinstall.sh debian 13 --password Lili900508@@
             echo "Debian 13系统安装完成。"
             ;;
         3)
