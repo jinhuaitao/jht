@@ -862,7 +862,7 @@ rc-service mfa-start restart
 echo "mfa 服务已设置完成并已自动重启。"
 
     echo "mfa-start 安装完成。"
-    echo "访问地址：http://IP:9087 用户名:admin 密码:admin"
+    echo "访问地址：http://IP:9087 用户名:jht@jht.one 密码:Lili900508@@"
     return_to_script
 }
 
